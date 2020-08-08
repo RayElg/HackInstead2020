@@ -1,2 +1,2 @@
-wage 27204
-height 165.25
+salary(CAD) 27204
+height(cm) 165.25
