@@ -10,6 +10,7 @@
 
 #print % of population with trait
 
+#
 
 
 #Note create method to sort through txt file to create respective maps for each of the traits, eyes, country, 
