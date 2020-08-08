@@ -22,6 +22,9 @@ def percentComparison(key, value):
 parseAvgs()
 print(averages)
 
-print(percentComparison("wage",10000))
+
         
 
+for key in averages.keys():
+    print("What is your " + key)
+    print(percentComparison(key,float(input(" "))))
