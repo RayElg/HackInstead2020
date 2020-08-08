@@ -1,4 +1,4 @@
 salary(CAD)
 For comparison, consider how many loaves of bread your income could purchase in Tunisia, where the average price for one is 0.17 CAD.
 height(cm)
-The tallest nation in the world is The Netherlands, where the combined male & female average is 175 cm tall
+The tallest nation in the world is The Netherlands, where the combined male & female average is 175 cm tall. 

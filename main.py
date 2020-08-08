@@ -1,27 +1,28 @@
+#The dictionaries
 averages = {}
 facts = {}
 
-def parseAvgs():
+def parseAvgs(): #Populates averages dictionary from avgs.txt
     with open('avgs.txt','r') as f:
         for line in f:
             lst = line.split()
-            averages[lst[0]] = float(lst[1])
+            averages[lst[0]] = float(lst[1]) #First word in line is key, next is value
 
-def parseFacts():
+def parseFacts(): #Populates facts dictionary from facts.txt
     global facts
     isKey = True
     with open('facts.txt','r') as f:
-        stripped = [line.strip() for line in f.readlines()]
+        stripped = [line.strip() for line in f.readlines()] #removes newline character
         for line in stripped:
-            if isKey:
+            if isKey: #For alternating between lines being the key and being the value
                 key = line
                 isKey = False
             else:
                 fact = line
                 isKey = True
-                facts[key] = fact
+                facts[key] = fact #First line is key, then the fact string, repeats
 
-def percentComparison(key, value):
+def percentComparison(key, value): #Returns a string detailing the percent difference between the average value and inputted value
     global averages
     avg = averages[key]
     
@@ -42,7 +43,7 @@ print(averages)
 
         
 
-for key in averages.keys():
+for key in averages.keys(): #Iterate through keys
     print("What is your " + key)
-    print(percentComparison(key,float(input(" "))))
-    print(facts[key])
+    print(percentComparison(key,float(input(" ")))) #user input & function call
+    print(facts[key]) #Print fact about this stat
