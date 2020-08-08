@@ -1,8 +1,9 @@
-Brown 75%
-Blue 10%
-Hazel 5%
-Amber 5%
-Green 2%
-Red/Violet 1%
-Mixed 1%
-Heterochromia 1%
+EYE Brown 75
+EYE Blue 9
+EYE Hazel 5
+EYE Amber 5
+EYE Green 2
+EYE Red/Violet 1
+EYE Mixed 1
+EYE Heterochromia 1
+EYE Other 1
