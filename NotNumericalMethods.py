@@ -15,21 +15,24 @@ def ReturnComparison(UserKey):
 
 #list all keys within an dictionary
 def ListKeysOfDic(Dictionary):
-    for keys in Dictionary:
-        print(" " +key+ " ")
+    counter = 1
+    for keys in Dictionary.keys():
+        print(str(counter)+". " + keys + " ")
+        counter = counter + 1
 
 
 #prompt user for input
 def PromptUser():
     ListKeys(EyeColours)
 
+#gets the users input
 def GetUserInput():
     UserEyeColour = input("From the list of Eye colours above enter which colour most accuratly describes you: ")
     return(UserEyeColour)
 
 
 FillEyeColours()
-print(EyeColours)
+ListKeysOfDic(EyeColours)
 val = GetUserInput()
 print(val)
 ##ReturnComparison(PromptUser)
