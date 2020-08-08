@@ -163,7 +163,6 @@ def submitClicked(event): #Handles the submit button being clicked
     if keySequence[currentKeyIndex][0] == "NonNumerical":
         try:
             if keySequence[currentKeyIndex][1] == "eye colour":
-
                 document["question"] <= P(EyeDescription())
 
                 document["question"] <= P(("1. "+STRONG("Brown"))+(" 2. "+STRONG("Blue"))+(" 3. "+STRONG("Hazel"))+(" 4. "+STRONG("Amber")))
@@ -176,11 +175,11 @@ def submitClicked(event): #Handles the submit button being clicked
                 document["question"].clear()
                 document["question"] <= P(STRONG(ContDescription1()))
                 document["question"] <= P(ContDescription2())
+
                 document["question"] <= P(("1. "+STRONG("Asia"))+(" 2. "+STRONG("Africa"))+(" 3. "+STRONG("Europe")))
                 document["question"] <= P(("4. "+STRONG("South America"))+(" 5. "+STRONG("North America"))+(" 6. "+STRONG("Oceania")))
             
             if keySequence[currentKeyIndex][1] == "continent":
-
                 document["zone"] <= P(ReturnContComparison((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
@@ -188,10 +187,10 @@ def submitClicked(event): #Handles the submit button being clicked
                 document["question"].clear()
                 document["question"] <= P(STRONG(SexDescription1()))
                 document["question"] <= P(SexDescription2())
+
                 document["question"] <= P(("1. "+STRONG("Male"))+(" 2. "+STRONG("Female"))+(" 3. "+STRONG("Intersex")))
 
             if keySequence[currentKeyIndex][1] == "sex":
-
                 document["zone"] <= P(ReturnSexComparison((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
