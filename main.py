@@ -95,7 +95,7 @@ def ListKeysOfDic(Dictionary):
     for keys in Dictionary.keys():
         print(str(counter)+". " + keys + " ")
         counter = counter + 1
-    
+
 
 #gets the users input
 def GetEyeUserInput():
@@ -146,7 +146,7 @@ keySequence = [
         ["numerical","salary(CAD)"],
         ["numerical","height(cm)"],
         ["NonNumerical","eye colour"],
-        ["NonNumerical","Contient"],
+        ["NonNumerical","contient"],
         ["Nonnumerical","sex"]
         ]
 
@@ -175,15 +175,22 @@ def submitClicked(event): #Handles the submit button being clicked
             
 
 #Note leave double # during test
-    #if keySequence[currentKeyIndex][0] == "NonNumerical":
+    if keySequence[currentKeyIndex][0] == "NonNumerical":
         ##try:
-       #     if keySequence[currentKeyIndex][1] == "eye colour":
-       #         document["zone"] <= P(ReturnEyeComparison((userIn)))
+            if keySequence[currentKeyIndex][1] == "eye colour":
+                document["question"] <= P("(Please selection an eye colour from below that best describes you)")
+                document["question"] <= P(("1. "+STRONG("Brown"))+(" 2. "+STRONG("Blue"))+(" 3. "+STRONG("Hazel"))+(" 4. "+STRONG("Amber")))
+                document["question"] <= P(("5. "+STRONG("Green"))+(" 6. "+STRONG("Red/Violet"))+(" 7. "+STRONG("Heterochromia"))+(" 8. "+STRONG("Other")))
+                document["zone"] <= P(ReturnEyeComparison((userIn)))
 
-        #        if((currentKeyIndex + 1) < len(keySequence)):
-          #          currentKeyIndex += 1
-         #       document["question"].clear()
-           #     document["question"] <= P("test Question")
+                if((currentKeyIndex + 1) < len(keySequence)):
+                    currentKeyIndex += 1
+                document["question"].clear()
+                document["question"] <= P(STRONG("What is your " + keySequence[currentKeyIndex][1] + "?"))
+            
+            elif keySequence[currentKeyIndex][1] == "eye colour":
+                document["question"] <= P("(Please select which continent you currently live on)")
+                
             
 
 
