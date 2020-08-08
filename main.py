@@ -78,7 +78,7 @@ def submitClicked(event): #Handles the submit button being clicked
             if ((currentKeyIndex + 1) < len(keySequence)):
                 currentKeyIndex += 1
             document["question"].clear()
-            document["question"] <= STRONG("What is your " + keySequence[currentKeyIndex][1] + "?")
+            document["question"] <= P(STRONG("What is your " + keySequence[currentKeyIndex][1] + "?"))
             
         except ValueError:
             document["zone"] <= P("Please double check your input")

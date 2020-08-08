@@ -5,10 +5,12 @@
 </head>
 <body onload="brython({debug: 1, indexedDB: false})">
 
+
 <script type="text/python" src="main.py"></script>
+<link href="index.css" rel="stylesheet" type="text/css">
 
 <div id="question" class="zone">
-<strong style="text-align: center;">What is your salary(CAD)?</strong>
+<p><strong style="text-align: center;">What is your salary(CAD)?</strong></p>
 </div>
 
 <p style="text-align: center;"><input id="userTextBox" size="60" type="text" placeholder="Enter yours!" /> <button id="submitButton" type="button">Compare</button></p>
