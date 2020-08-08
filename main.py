@@ -6,9 +6,6 @@ from browser.html import P, STRONG
 #The dictionaries
 averages = {}
 facts = {}
-EyeColours = {}
-Contient = {}
-Sex = {}
 
 #METHODS USED FOR NUMERICAL FUNCTIONS 
 
@@ -50,10 +47,12 @@ parseFacts()
 print(facts)
 print(averages)
 
-
+#dictionaries used for non numerical component
+EyeColours = {}
+Contient = {}
+Sex = {}
 
 #METHODS USED FOR NON NUMERICAL COMPONENT
-
 
 #method to read from eyecolours.txt into dictioanry 
 def FillDictionarys():
@@ -133,7 +132,7 @@ def ComputeInputSex():
     val = GetSexInput()
     return(val)
 
-
+FillDictionarys()
 
         
 #This is for running in commandline. to do so, comment out brython code and uncomment this.
@@ -177,7 +176,14 @@ def submitClicked(event): #Handles the submit button being clicked
 
     if keySequence[currentKeyIndex][0] == "NonNumerical":
         try:
-            document["zone"] <= P
+            if keySequence[currentKeyIndex][1] == "eye colour":
+                document["zone"] <= P(ReturnEyeComparison((userIn)))
+
+                if((currentKeyIndex + 1) < len(keySequence)):
+                    currentKeyIndex += 1
+                document["question"].clear()
+                document["question"] <= P("test Question")
+            
 
 
 
