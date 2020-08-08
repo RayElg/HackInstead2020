@@ -82,6 +82,8 @@ def submitClicked(event): #Handles the submit button being clicked
             
         except ValueError:
             document["zone"] <= P("Please double check your input")
+            
+    #create the second section of code for elif second for not numerical
 
 #Link our python method to the submit button...
 document["submitButton"].bind("click",submitClicked)
