@@ -147,14 +147,9 @@ keySequence = [
         ["numerical","height(cm)"],
         ["numerical","worth(Net,CAD)"],
         ["NonNumerical","eye colour"],
-<<<<<<< HEAD
         ["NonNumerical","continent"],
         ["Nonnumerical","sex"],
-        ["Nonnumerical","end"]
-=======
-        ["NonNumerical","Contient"],
-        ["Nonnumerical","sex"]
->>>>>>> 42f0c2bf9d0897339255b409999bf22e6eb237c3
+        ["Nonnumerical","FinalScreen"]
         ]
 
 currentKeyIndex = 0
@@ -181,10 +176,8 @@ def submitClicked(event): #Handles the submit button being clicked
             document["zone"] <= P("Please double check your input")
             
 
-#Note leave double # during test
-<<<<<<< HEAD
     if keySequence[currentKeyIndex][0] == "NonNumerical":
-        #try:
+        try:
             if keySequence[currentKeyIndex][1] == "eye colour":
                 document["question"] <= P("(Please selection an eye colour from below that best describes you)")
                 document["question"] <= P(("1. "+STRONG("Brown"))+(" 2. "+STRONG("Blue"))+(" 3. "+STRONG("Hazel"))+(" 4. "+STRONG("Amber")))
@@ -200,7 +193,7 @@ def submitClicked(event): #Handles the submit button being clicked
                 document["question"] <= P(("1. "+STRONG("Asia"))+(" 2. "+STRONG("Africa"))+(" 3. "+STRONG("Europe")))
                 document["question"] <= P(("4. "+STRONG("South America"))+(" 5. "+STRONG("North America"))+(" 6. "+STRONG("Oceania")))
             
-            elif keySequence[currentKeyIndex][1] == "continent":
+            if keySequence[currentKeyIndex][1] == "continent":
 
                 document["zone"] <= P(ReturnContComparison((userIn)))
 
@@ -211,31 +204,25 @@ def submitClicked(event): #Handles the submit button being clicked
                 document["question"] <= P("(Please select which sex most accurately describes you)")
                 document["question"] <= P(("1. "+STRONG("Male"))+(" 2. "+STRONG("Female"))+(" 3. "+STRONG("Intersex")))
 
-            elif keySequence[currentKeyIndex][1] == "end":
+            if keySequence[currentKeyIndex][1] == "sex":
 
                 document["zone"] <= P(ReturnSexComparison((userIn)))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
                     currentKeyIndex += 1
                 document["question"].clear()
-                document["question"] <= P(STRONG("Welcome to the " + keySequence[currentKeyIndex][1] + " of the program!!"))
+                document["question"] <= P(STRONG("End of program!"))
+            
+            if keySequence[currentKeyIndex][1] == "Finalscreen":
+                document["question"].clear()
+                document["question"] <= P(STRONG("The End!"))
+
         
-       # except ValueError:
-        #    document["zone"] <= P("Please double check your input")
+        except ValueError:
+            document["zone"] <= P("Please double check your input")
 
 
 
-=======
-    #if keySequence[currentKeyIndex][0] == "NonNumerical":
-        ##try:
-       #     if keySequence[currentKeyIndex][1] == "eye colour":
-       #         document["zone"] <= P(ReturnEyeComparison((userIn)))
-
-        #        if((currentKeyIndex + 1) < len(keySequence)):
-          #          currentKeyIndex += 1
-         #       document["question"].clear()
-           #     document["question"] <= P("test Question")
->>>>>>> 42f0c2bf9d0897339255b409999bf22e6eb237c3
             
 
 
