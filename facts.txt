@@ -2,3 +2,5 @@ salary(CAD)
 For comparison, consider how many loaves of bread your income could purchase in Tunisia, where the average price for one is 0.17 CAD.
 height(cm)
 The tallest nation in the world is The Netherlands, where the combined male & female average is 175 cm tall. The average height of men worldwide is 171 cm, and women 160. The tallest person to ever live (Robert Wadlow) was 272 cm.
+worth(Net,CAD)
+There are about 2100 individuals with a net worth of a billion dollars, which skews the average. In 2020, the average Canadian household owes $1.77 for every $1 of disposable income they possess.
