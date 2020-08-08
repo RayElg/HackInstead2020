@@ -148,8 +148,8 @@ keySequence = [
         ["numerical","worth(Net,CAD)"],
         ["NonNumerical","eye colour"],
         ["NonNumerical","continent"],
-        ["Nonnumerical","sex"],
-        ["Nonnumerical","FinalScreen"]
+        ["NonNumerical","sex"],
+        ["NonNumerical","FinalScreen"]
         ]
 
 currentKeyIndex = 0
@@ -211,7 +211,8 @@ def submitClicked(event): #Handles the submit button being clicked
                 if((currentKeyIndex + 1) < len(keySequence)):
                     currentKeyIndex += 1
                 document["question"].clear()
-                document["question"] <= P(STRONG("End of program!"))
+                document["question"] <= P(STRONG("Thank you!"))
+                document["submission"].clear()
             
             if keySequence[currentKeyIndex][1] == "Finalscreen":
                 document["question"].clear()
