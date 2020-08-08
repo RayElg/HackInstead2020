@@ -1,6 +1,6 @@
 #Brython things...
 from browser import document
-from browser.html import P
+from browser.html import P, STRONG
 
 
 #The dictionaries
@@ -54,18 +54,32 @@ print(averages)
 ##    print(percentComparison(key,float(input(" ")))) #user input & function call
 ##    print(facts[key]) #Print fact about this stat
 
-mode = "numerical"
-#The options being "numerical", "non"
-currentKey = "salary(CAD)"
-#Current key for numerical stats
+
+keySequence = [
+        ["numerical","salary(CAD)"],
+        ["numerical","height(cm)"]
+        ]
+
+currentKeyIndex = 0
+    
 
 #Brython code
 def submitClicked(event): #Handles the submit button being clicked
+    global currentKeyIndex
+    global keySequence
+
     userIn = (document["userTextBox"].value)
 
-    if mode == "numerical":
+    if keySequence[currentKeyIndex][0] == "numerical":
         try:
-            document["zone"] <= P(percentComparison(currentKey,float(userIn)))
+            document["zone"] <= P(percentComparison(keySequence[currentKeyIndex][1],float(userIn)))
+            document["zone"] <= P(facts[keySequence[currentKeyIndex][1]])
+
+            if ((currentKeyIndex + 1) < len(keySequence)):
+                currentKeyIndex += 1
+            document["question"].clear()
+            document["question"] <= STRONG("What is your " + keySequence[currentKeyIndex][1] + "?")
+            
         except ValueError:
             document["zone"] <= P("Please double check your input")
 
