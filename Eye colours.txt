@@ -4,7 +4,6 @@ EYE Hazel 5
 EYE Amber 5
 EYE Green 2
 EYE Red/Violet 1
-EYE Mixed 1
 EYE Heterochromia 1
 EYE Other 1
 CONTINENT Asia 59.64
