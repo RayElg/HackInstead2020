@@ -1,3 +1,12 @@
+averages = {}
+
+def parseAvgs():
+    with open('avgs.txt','r') as f:
+        for line in f:
+            lst = line.split()
+            averages[lst[0]] = lst[1]
+    
+
 def percentComparison(key, value):
     incomeAvg = 50000
     if(key == "income"): #Temporary way of evaluating keys
@@ -11,3 +20,5 @@ def percentComparison(key, value):
 
 print(percentComparison("income",10000))
         
+parseAvgs()
+print(averages)
