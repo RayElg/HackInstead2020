@@ -1,6 +1,12 @@
+#Brython things...
+from browser import document
+from browser import alert
+
+
 #The dictionaries
 averages = {}
 facts = {}
+
 
 def parseAvgs(): #Populates averages dictionary from avgs.txt
     with open('avgs.txt','r') as f:
@@ -42,8 +48,21 @@ print(facts)
 print(averages)
 
         
+#This is for running in commandline. to do so, comment out brython code and uncomment this.
+##for key in averages.keys(): #Iterate through keys
+##    print("What is your " + key)
+##    print(percentComparison(key,float(input(" ")))) #user input & function call
+##    print(facts[key]) #Print fact about this stat
 
-for key in averages.keys(): #Iterate through keys
-    print("What is your " + key)
-    print(percentComparison(key,float(input(" ")))) #user input & function call
-    print(facts[key]) #Print fact about this stat
+
+#Brython code
+def submitClicked(event): #Handles the submit button being clicked
+    userIn = (document["userTextBox"].value)
+    try:
+        float(userIn)
+    except ValueError:
+        print("Please double check your input")
+
+
+#Link our python method to the submit button...
+document["submitButton"].bind("click",submitClicked)
