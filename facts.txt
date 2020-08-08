@@ -1,8 +1,4 @@
 salary(CAD)
 For comparison, consider how many loaves of bread your income could purchase in Tunisia, where the average price for one is 0.17 CAD.
 height(cm)
-The tallest nation in the world is The Netherlands, where the combined male & female average is 175 cm tall. 
-Average height of man worldwide is 171 cm
-Average height of woman worldwide is
-Tallest person to ever live (Robert Wadlow) was 272 cm
-Shortest person to ever live (Sultan – Chandra Bahadur Dangi) is 54.6 cm
+The tallest nation in the world is The Netherlands, where the combined male & female average is 175 cm tall. The verage height of men worldwide is 171 cm, and women 160. Tallest person to ever live (Robert Wadlow) was 272 cm.
