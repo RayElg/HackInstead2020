@@ -1,7 +1,7 @@
 #Brython things...
 from browser import document
 from browser.html import P, STRONG
-
+import re
 
 #The dictionaries
 averages = {}
@@ -35,11 +35,11 @@ def percentComparison(key, value): #Returns a string detailing the percent diffe
     
     percentDiff = (abs(value-avg)/((avg+value)/2)) * 100
     if (value > avg):
-        return ("Your " + key + " is " + str(percentDiff) + "% greater than average")
+        return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% greater than average")
     elif (avg > value):
-        return ("Your " + key + " is " + str(percentDiff) + "% less than average")
+        return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% less than average")
     else:
-        return ("Your " + key + " is average!")
+        return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is average!")
 
 
 parseAvgs()
