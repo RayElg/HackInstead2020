@@ -6,12 +6,15 @@ def FillEyeColours():
     with open('Eye colours.txt', 'r') as ReadOnto:
         for line in ReadOnto:
             component = line.split()
-            EyeColours[component[0]] = str(component[1])
+            if component[0] == "EYE":
+                EyeColours[component[1]] = str(component[2])
+
 
 #return the output of the users Eye colour
 def ReturnComparison(UserKey):
     global EyeColours
-    return ("You have a " +UserKey+ " which is a trait shared by  "+EyeColours.get(UserKey))
+    return ("You have a " +UserKey+ " eyes, which is a trait shared by  " +EyeColours.get(UserKey)+ "%" + " of the population")
+
 
 #list all keys within an dictionary
 def ListKeysOfDic(Dictionary):
@@ -19,23 +22,25 @@ def ListKeysOfDic(Dictionary):
     for keys in Dictionary.keys():
         print(str(counter)+". " + keys + " ")
         counter = counter + 1
-
-
-#prompt user for input
-def PromptUser():
-    ListKeys(EyeColours)
+    
 
 #gets the users input
 def GetUserInput():
-    UserEyeColour = input("From the list of Eye colours above enter which colour most accuratly describes you: ")
+    UserEyeColour = input("From the list of Eye colours above enter which colour most accuratly describes yours: ")
     return(UserEyeColour)
+
+#conbines functionality of getting user input and listing keys
+def ComputeInputEyeColour():
+    ListKeysOfDic(EyeColours)
+    val = GetUserInput()
+    return(val)
+
 
 
 FillEyeColours()
-ListKeysOfDic(EyeColours)
-val = GetUserInput()
-print(val)
-##ReturnComparison(PromptUser)
+print(ReturnComparison(ComputeInputEyeColour()))
+
+
 
 
 
