@@ -1,6 +1,6 @@
 #Brython things...
 from browser import document
-from browser import alert
+from browser.html import P
 
 
 #The dictionaries
@@ -54,15 +54,20 @@ print(averages)
 ##    print(percentComparison(key,float(input(" ")))) #user input & function call
 ##    print(facts[key]) #Print fact about this stat
 
+mode = "numerical"
+#The options being "numerical", "non"
+currentKey = "salary(CAD)"
+#Current key for numerical stats
 
 #Brython code
 def submitClicked(event): #Handles the submit button being clicked
     userIn = (document["userTextBox"].value)
-    try:
-        float(userIn)
-    except ValueError:
-        print("Please double check your input")
 
+    if mode == "numerical":
+        try:
+            document["zone"] <= P(percentComparison(currentKey,float(userIn)))
+        except ValueError:
+            document["zone"] <= P("Please double check your input")
 
 #Link our python method to the submit button...
 document["submitButton"].bind("click",submitClicked)
