@@ -13,5 +13,6 @@ CONTINENT Europe 9.69
 CONTINENT South America 5.53
 CONTINENT North America 4.77
 CONTINENT Oceania 0.55
-SEX Male 51.9
-SEX Female 48.1
+SEX Male 50.7
+SEX Female 46.1
+SEX Intersex 3.2
