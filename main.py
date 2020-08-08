@@ -174,15 +174,16 @@ def submitClicked(event): #Handles the submit button being clicked
             document["zone"] <= P("Please double check your input")
             
 
-    if keySequence[currentKeyIndex][0] == "NonNumerical":
-        try:
-            if keySequence[currentKeyIndex][1] == "eye colour":
-                document["zone"] <= P(ReturnEyeComparison((userIn)))
+#Note leave double # during test
+    #if keySequence[currentKeyIndex][0] == "NonNumerical":
+        ##try:
+       #     if keySequence[currentKeyIndex][1] == "eye colour":
+       #         document["zone"] <= P(ReturnEyeComparison((userIn)))
 
-                if((currentKeyIndex + 1) < len(keySequence)):
-                    currentKeyIndex += 1
-                document["question"].clear()
-                document["question"] <= P("test Question")
+        #        if((currentKeyIndex + 1) < len(keySequence)):
+          #          currentKeyIndex += 1
+         #       document["question"].clear()
+           #     document["question"] <= P("test Question")
             
 
 
