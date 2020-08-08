@@ -35,9 +35,9 @@ def percentComparison(key, value): #Returns a string detailing the percent diffe
     
     percentDiff = (abs(value-avg)/((avg+value)/2)) * 100
     if (value > avg):
-        return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% greater than average")
+        return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% greater than the worldwide average, " + str(avg))
     elif (avg > value):
-        return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% less than average")
+        return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% less than the worldwide average, " + str(avg))
     else:
         return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is average!")
 
