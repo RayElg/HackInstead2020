@@ -6,6 +6,10 @@ from browser.html import P, STRONG
 #The dictionaries
 averages = {}
 facts = {}
+EyeColours = {}
+Contient = {}
+Sex = {}
+
 
 
 def parseAvgs(): #Populates averages dictionary from avgs.txt
@@ -83,6 +87,16 @@ def submitClicked(event): #Handles the submit button being clicked
         except ValueError:
             document["zone"] <= P("Please double check your input")
             
+
+    if keySequence[currentKeyIndex][0] == "NonNumerical":
+        try:
+
+
+
+
+
+
+
     #create the second section of code for elif second for not numerical
 
 #Link our python method to the submit button...
