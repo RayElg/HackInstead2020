@@ -1,3 +1,15 @@
+#create Dictionary for eye colour 
+EyeColours = {}
+
+#method to read from eyecolours.txt into dictioanry 
+def FillEyeColours():
+    with open('Eye colours.txt', 'r') as ReadOnto #this opens the txt file 
+        for line in ReadOnto:
+            component = line.split()
+            EyeColours
+    
+
+
 #read from a non-numerical txt file
 
 
