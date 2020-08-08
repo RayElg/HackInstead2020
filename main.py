@@ -95,7 +95,7 @@ def ListKeysOfDic(Dictionary):
     for keys in Dictionary.keys():
         print(str(counter)+". " + keys + " ")
         counter = counter + 1
-
+    
 
 #gets the users input
 def GetEyeUserInput():
@@ -145,10 +145,16 @@ FillDictionarys()
 keySequence = [
         ["numerical","salary(CAD)"],
         ["numerical","height(cm)"],
+        ["numerical","worth(Net,CAD)"],
         ["NonNumerical","eye colour"],
+<<<<<<< HEAD
         ["NonNumerical","continent"],
         ["Nonnumerical","sex"],
         ["Nonnumerical","end"]
+=======
+        ["NonNumerical","Contient"],
+        ["Nonnumerical","sex"]
+>>>>>>> 42f0c2bf9d0897339255b409999bf22e6eb237c3
         ]
 
 currentKeyIndex = 0
@@ -176,6 +182,7 @@ def submitClicked(event): #Handles the submit button being clicked
             
 
 #Note leave double # during test
+<<<<<<< HEAD
     if keySequence[currentKeyIndex][0] == "NonNumerical":
         #try:
             if keySequence[currentKeyIndex][1] == "eye colour":
@@ -218,6 +225,17 @@ def submitClicked(event): #Handles the submit button being clicked
 
 
 
+=======
+    #if keySequence[currentKeyIndex][0] == "NonNumerical":
+        ##try:
+       #     if keySequence[currentKeyIndex][1] == "eye colour":
+       #         document["zone"] <= P(ReturnEyeComparison((userIn)))
+
+        #        if((currentKeyIndex + 1) < len(keySequence)):
+          #          currentKeyIndex += 1
+         #       document["question"].clear()
+           #     document["question"] <= P("test Question")
+>>>>>>> 42f0c2bf9d0897339255b409999bf22e6eb237c3
             
 
 
