@@ -1,2 +1,3 @@
 salary(CAD) 27204
 height(cm) 165.25
+worth(Net,CAD) 94,816
