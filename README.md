@@ -1,4 +1,4 @@
-# ["COMPARE ME"](https://rayelg.github.io/hackinstead2020)
+# ["COMPARE ME"](https://rayelg.github.io/HackInstead2020/)
 Living in Canada makes it hard to grasp humanity on a global scale.
 This site is meant to give you some perspective...
 
@@ -12,7 +12,7 @@ This site is meant to give you some perspective...
 ### The Problem:
 As aforementioned, a lack of perspective.
 ### The solution:
-[Compare Me](https://rayelg.github.io/hackinstead2020)
+[Compare Me](https://rayelg.github.io/HackInstead2020/)
 
 ### Origin
 This respository is a submission for the [HackInstead2020](https://www.hackworks.com/en/hack-instead). 
