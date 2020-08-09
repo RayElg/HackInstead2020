@@ -50,9 +50,30 @@ print(averages)
 #dictionaries used for non numerical component
 EyeColours = {}
 Contient = {}
+NonFacts = {}
 Sex = {}
 
 #METHODS USED FOR NON NUMERICAL COMPONENT
+
+#method to fill in country facts
+def FillCountfacts():
+    global NonFacts
+    isKey = True
+    with open('Continentfacts.txt', 'r') as ReadThis:
+        Revmoved = [line.strip() for line in ReadThis.readlines()]
+        for line in Revmoved:
+            if isKey:
+                key = line
+                isKey = False
+            else:
+                fact = line
+                isKey = True
+                NonFacts[key] = fact
+
+def ReturnFact(UserSelection):
+    x = NonFacts[UserSelection]
+    return(x)
+
 
 #method to read from eyecolours.txt into dictioanry 
 def FillDictionarys():
@@ -116,6 +137,7 @@ def SexDescription2():
     return("(Please select which sex most accurately describes you)")
 
 
+FillCountfacts()
 FillDictionarys()
 
         
@@ -181,6 +203,7 @@ def submitClicked(event): #Handles the submit button being clicked
             
             if keySequence[currentKeyIndex][1] == "continent":
                 document["zone"] <= P(ReturnContComparison((userIn).lower()))
+                document["zone"] <= P(ReturnFact((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
                     currentKeyIndex += 1
