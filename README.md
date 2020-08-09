@@ -1,5 +1,6 @@
-# README File for HackInstead2020 
-created 07/08/2020
+# ["COMPARE ME"](https://rayelg.github.io/hackinstead2020)
+Living in Canada makes it hard to grasp humanity on a global scale.
+This site is meant to give you some perspective...
 
 ### Creative and Devlopment Team
 
@@ -8,33 +9,33 @@ created 07/08/2020
 * [Asgar](https://github.com/System-out-print-Asgar)
 * [Mitch](https://github.com/MitchDorty)
 
+### The Problem:
+As aforementioned, a lack of perspective.
+### The solution:
+[Compare Me](https://rayelg.github.io/hackinstead2020)
 
-## Functionality 
-
-### Purpose
-The purpose of creating this respository is to be treated as a submmison for the [HackInstead2020](https://www.hackworks.com/en/hack-instead). 
-This program was made as a part of a joint collaboration between the four memebers to create a program
-in over the span of 48 hours. The final agreed upon program was to create a program in which a user to 
-fill in a form about themselves; through which their information and statistics are graphed and displayed
+### Origin
+This respository is a submission for the [HackInstead2020](https://www.hackworks.com/en/hack-instead). 
+This program was made as a part of a joint collaboration between the four members to create a program 
+over the span of 48 hours. The final agreed upon program was to create a program in which a user 
+fills in a form about themselves; through which their information is displayed
 agaisnt global averages and world wide trends, to further give the user a better idea on their ranking among
 the world.
 
 ![Image of HackInstead Title screen](https://cdn.discordapp.com/attachments/697886882255863931/741463634361712651/unknown.png)
 
-### Usage
 
-#### Downloading
-Due to the program making use of multiple files it is reccomened that all file be downloaded and stored within
-the same folder in order for easy access and compliling.
-
-#### Compiling/Running 
 ##### Running Locally
-To run this program locally the user is required to import the Github files. The next step is to use open terminal and print the file path folder containing the files.
+
+If one wishes to access this site locally, (such as to modify & test their own branch of it), 
+the user is required to import the Github files. The next step is to use open terminal and print the
+file path folder containing the files.
+
 Ex:
 ```
 cd C:\Users\Admin\Documents\GitHub\HackInstead2020
 ```
-Once path has been established, the next thing required is to start hosting it. This is done by using the fallowing command in the terminal under your path.
+Once path has been established, the next thing required is to start hosting it. This is done by using the following command in the terminal under your path.
 Ex:
 ```
 python -m http.server 8000
@@ -47,12 +48,6 @@ Once this prompt appears, posting the domain URL in the search bar of any web br
 ```
 http://localhost:8000/index.html
 ```
-##### Running Github Link
-[To be filled as code is devloped]
-
-
-#### Using Program
-[To be filled as code is devloped]
 
 
 
