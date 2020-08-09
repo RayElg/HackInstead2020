@@ -138,12 +138,13 @@ keySequence = [
 
 currentKeyIndex = 0
     
-
+hasAsked = False
 #Brython code
 def submitClicked(event): #Handles the submit button being clicked
     global currentKeyIndex
     global keySequence
-
+    global hasAsked
+    
     userIn = (document["userTextBox"].value)
 
     if keySequence[currentKeyIndex][0] == "numerical":
@@ -159,15 +160,16 @@ def submitClicked(event): #Handles the submit button being clicked
         except ValueError:
             document["zone"] <= P("Please double check your input")
             
-
     if keySequence[currentKeyIndex][0] == "NonNumerical":
         try:
             if keySequence[currentKeyIndex][1] == "eye colour":
-                document["question"] <= P(EyeDescription())
-
-                document["question"] <= P(("1. "+STRONG("Brown"))+(" 2. "+STRONG("Blue"))+(" 3. "+STRONG("Hazel"))+(" 4. "+STRONG("Amber")))
-                document["question"] <= P(("5. "+STRONG("Green"))+(" 6. "+STRONG("Red/Violet"))+(" 7. "+STRONG("Heterochromia"))+(" 8. "+STRONG("Other")))
                 
+                if(not (hasAsked)):
+                    document["question"] <= P(EyeDescription())
+
+                    document["question"] <= P(("1. "+STRONG("Brown"))+(" 2. "+STRONG("Blue"))+(" 3. "+STRONG("Hazel"))+(" 4. "+STRONG("Amber")))
+                    document["question"] <= P(("5. "+STRONG("Green"))+(" 6. "+STRONG("Red/Violet"))+(" 7. "+STRONG("Heterochromia"))+(" 8. "+STRONG("Other")))
+                hasAsked = True
                 document["zone"] <= P(ReturnEyeComparison((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
