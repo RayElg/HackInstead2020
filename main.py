@@ -33,7 +33,7 @@ def percentComparison(key, value): #Returns a string detailing the percent diffe
     global averages
     avg = averages[key]
     
-    percentDiff = (((abs(value - avg))/avg) * 100.0
+    percentDiff = (((abs(value - avg))/avg) * 100.0)
     if (value > avg):
         return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% greater than the worldwide average, " + str(avg))
     elif (avg > value):
