@@ -28,7 +28,28 @@ Due to the program making use of multiple files it is reccomened that all file b
 the same folder in order for easy access and compliling.
 
 #### Compiling/Running 
-To run program the user is required to [Insert name of main file here]. This File allows the user to interact with the program and code
+##### Running Locally
+To run this program locally the user is required to import the Github files. The next step is to use open terminal and print the file path folder containing the files.
+Ex:
+```
+cd C:\Users\Admin\Documents\GitHub\HackInstead2020
+```
+Once path has been established, the next thing required is to start hosting it. This is done by using the fallowing command in the terminal under your path.
+Ex:
+```
+python -m http.server 8000
+```
+A confirmation message will in terminal letting the User know that the file is being hosted. This message will look like this:
+```
+Serving HTTP on :: port 8000 (http://[::]:8000/) . . .
+```
+Once this prompt appears, posting the domain URL in the search bar of any web browser will allow you to be directed towards the program and begin using it:
+```
+http://localhost:8000/index.html
+```
+##### Running Github Link
+[To be filled as code is devloped]
+
 
 #### Using Program
 [To be filled as code is devloped]
