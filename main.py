@@ -1,6 +1,6 @@
 #Brython things...
 from browser import document
-from browser.html import P, STRONG, A
+from browser.html import P, STRONG
 import re
 
 #The dictionaries
@@ -33,7 +33,7 @@ def percentComparison(key, value): #Returns a string detailing the percent diffe
     global averages
     avg = averages[key]
     
-    percentDiff = ((abs(value - avg))/avg) * 100.0
+    percentDiff = (abs(value-avg)/((avg+value)/2)) * 100
     if (value > avg):
         return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% greater than the worldwide average, " + str(avg))
     elif (avg > value):
@@ -61,18 +61,18 @@ def FillDictionarys():
             component = line.split()
 
             if component[0] == "EYE":
-                EyeColours[component[1]] = str(component[2])
+                EyeColours[(component[1]).lower()] = str(component[2])
 
             elif component[0] == "CONTINENT":
                 if component[1] == "South":
-                    Contient[component[1] +" "+ component[2]] = str(component[3])
+                    Contient[(component[1] +" "+ component[2]).lower()] = str(component[3])
                 elif component[1] == "North":
-                    Contient[component[1] +" "+ component[2]] = str(component[3])
+                    Contient[(component[1] +" "+ component[2]).lower()] = str(component[3])
                 else:
-                    Contient[component[1]] = str(component[2])
+                    Contient[(component[1]).lower()] = str(component[2])
             
             elif component[0] == "SEX":
-                Sex[component[1]] = str(component[2])
+                Sex[(component[1]).lower()] = str(component[2])
 
 
 #return the output of the users Eye colour
@@ -97,40 +97,24 @@ def ListKeysOfDic(Dictionary):
         counter = counter + 1
     
 
+
+
 #gets the users input
-def GetEyeUserInput():
-    UserEyeColour = input("Choose from the list of Eye colours and enter which colour most accuratly describes yours: ")
-    return(UserEyeColour)
+def EyeDescription():
+    return("(Please selection an eye colour from below that best describes you)")
 
-#get the user input
-def GetContientUserInput():
-    UserContienet = input("Choose from the list of Contient and enter which Continet most accurtly describes where you come from: ")
-    return(UserContienet)
+def ContDescription1():
+    return("What is your continent?")
 
-#get the user input
-def GetSexInput():
-    UserSex = input("Choose from the list of sexs which most accurtly describes what sex you are: ")
-    return(UserSex)
+def ContDescription2():
+    return("(Please select which continent you currently live on)")
 
+def SexDescription1():
+    return("What is your sex?")
 
+def SexDescription2():
+    return("(Please select which sex most accurately describes you)")
 
-#conbines functionality of getting user input and listing keys
-def ComputeInputEyeColour():
-    ListKeysOfDic(EyeColours)
-    val = GetEyeUserInput()
-    return(val)
-
-#combines Funcitonaliy of getting userinput and listing keys
-def ComputeInputContienet():
-    ListKeysOfDic(Contient)
-    val = GetContientUserInput()
-    return(val)
-
-#combines functonaliy of getting userinput and listing keys
-def ComputeInputSex():
-    ListKeysOfDic(Sex)
-    val = GetSexInput()
-    return(val)
 
 FillDictionarys()
 
@@ -161,7 +145,7 @@ def submitClicked(event): #Handles the submit button being clicked
     global keySequence
 
     userIn = (document["userTextBox"].value)
-    document["errorBox"].clear() #Clear any error messages
+
     if keySequence[currentKeyIndex][0] == "numerical":
         try:
             document["zone"] <= P(percentComparison(keySequence[currentKeyIndex][1],float(userIn)))
@@ -173,51 +157,47 @@ def submitClicked(event): #Handles the submit button being clicked
             document["question"] <= P(STRONG("What is your " + keySequence[currentKeyIndex][1] + "?"))
             
         except ValueError:
-            document["errorBox"] <= P("Please double check your input")
+            document["zone"] <= P("Please double check your input")
             
 
     if keySequence[currentKeyIndex][0] == "NonNumerical":
         try:
             if keySequence[currentKeyIndex][1] == "eye colour":
-                document["question"] <= P("(Please selection an eye colour from below that best describes you)")
+                document["question"] <= P(EyeDescription())
+
                 document["question"] <= P(("1. "+STRONG("Brown"))+(" 2. "+STRONG("Blue"))+(" 3. "+STRONG("Hazel"))+(" 4. "+STRONG("Amber")))
                 document["question"] <= P(("5. "+STRONG("Green"))+(" 6. "+STRONG("Red/Violet"))+(" 7. "+STRONG("Heterochromia"))+(" 8. "+STRONG("Other")))
                 
-                document["zone"] <= P(ReturnEyeComparison((userIn)))
+                document["zone"] <= P(ReturnEyeComparison((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
                     currentKeyIndex += 1
                 document["question"].clear()
-                document["question"] <= P(STRONG("What is your " + keySequence[currentKeyIndex][1] + "?"))
-                document["question"] <= P("(Please select which continent you currently live on)")
+                document["question"] <= P(STRONG(ContDescription1()))
+                document["question"] <= P(ContDescription2())
+
                 document["question"] <= P(("1. "+STRONG("Asia"))+(" 2. "+STRONG("Africa"))+(" 3. "+STRONG("Europe")))
                 document["question"] <= P(("4. "+STRONG("South America"))+(" 5. "+STRONG("North America"))+(" 6. "+STRONG("Oceania")))
             
             if keySequence[currentKeyIndex][1] == "continent":
-
-                document["zone"] <= P(ReturnContComparison((userIn)))
+                document["zone"] <= P(ReturnContComparison((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
                     currentKeyIndex += 1
                 document["question"].clear()
-                document["question"] <= P(STRONG("What is your " + keySequence[currentKeyIndex][1] + "?"))
-                document["question"] <= P("(Please select which sex most accurately describes you)")
+                document["question"] <= P(STRONG(SexDescription1()))
+                document["question"] <= P(SexDescription2())
+
                 document["question"] <= P(("1. "+STRONG("Male"))+(" 2. "+STRONG("Female"))+(" 3. "+STRONG("Intersex")))
 
             if keySequence[currentKeyIndex][1] == "sex":
-
-                document["zone"] <= P(ReturnSexComparison((userIn)))
+                document["zone"] <= P(ReturnSexComparison((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
                     currentKeyIndex += 1
                 document["question"].clear()
                 document["question"] <= P(STRONG("Thank you!"))
-                document["submission"].clear()
-                document["zone"] <= P(STRONG("If any of these figures about wealth or income equality concern you, consider looking at some of these charities..."))
-                document["zone"] <= P(A(' The UN Development Project ', href='https://www.undp.org'))
-                document["zone"] <= P(A(' The Borgen Project ', href='https://borgenproject.org/'))
-                document["zone"] <= P(A(' Oxfam ', href='https://www.oxfam.org'))
-
+                document["submission"].clear()  
         
         except ValueError:
             document["zone"] <= P("Please double check your input")
