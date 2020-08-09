@@ -99,15 +99,15 @@ def FillDictionarys():
 #return the output of the users Eye colour
 def ReturnEyeComparison(UserKey):
     global EyeColours
-    return ("You have a " +UserKey+ " eyes, which is a trait shared by  " +EyeColours.get(UserKey)+ "%" + " of the population")
+    return ("You have a " +UserKey+ " eyes, this is a trait shared by  " +EyeColours.get(UserKey)+ "%" + " of the world's population")
 
 def ReturnContComparison(UserKey):
     global Contient
-    return ("You live in " +UserKey+ ", " +UserKey+ " is also home to " +Contient.get(UserKey)+ "%" + " of the population")
+    return ("You live in " +UserKey+ ", " +UserKey+ " is also home to " +Contient.get(UserKey)+ "%" + " of the worlds's population")
 
 def ReturnSexComparison(UserKey):
     global Sex
-    return ("Your sex is " +UserKey+ ", this means your the same sex as " +Sex.get(UserKey)+ "%" + " of the population")
+    return ("Your sex is " +UserKey+ ", this means your the same sex as " +Sex.get(UserKey)+ "%" + " of the world's population")
 
 
 #list all keys within an dictionary
@@ -191,6 +191,7 @@ def submitClicked(event): #Handles the submit button being clicked
                 document["question"] <= P(("5. "+STRONG("Green"))+(" 6. "+STRONG("Red/Violet"))+(" 7. "+STRONG("Heterochromia"))+(" 8. "+STRONG("Other")))
                 
                 document["zone"] <= P(ReturnEyeComparison((userIn).lower()))
+                document["zone"] <= P(ReturnFact((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
                     currentKeyIndex += 1
@@ -215,6 +216,7 @@ def submitClicked(event): #Handles the submit button being clicked
 
             if keySequence[currentKeyIndex][1] == "sex":
                 document["zone"] <= P(ReturnSexComparison((userIn).lower()))
+                document["zone"] <= P(ReturnFact((userIn).lower()))
 
                 if((currentKeyIndex + 1) < len(keySequence)):
                     currentKeyIndex += 1
@@ -230,17 +232,6 @@ def submitClicked(event): #Handles the submit button being clicked
             document["zone"] <= P("Please double check your input")
 
 
-
-            
-
-
-
-
-
-
-
-
-    #create the second section of code for elif second for not numerical
 
 #Link our python method to the submit button...
 document["submitButton"].bind("click",submitClicked)
