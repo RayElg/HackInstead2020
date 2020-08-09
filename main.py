@@ -144,7 +144,7 @@ def submitClicked(event): #Handles the submit button being clicked
     global currentKeyIndex
     global keySequence
     global hasAsked
-    
+    document["errorBox"].clear()
     userIn = (document["userTextBox"].value)
 
     if keySequence[currentKeyIndex][0] == "numerical":
@@ -158,7 +158,7 @@ def submitClicked(event): #Handles the submit button being clicked
             document["question"] <= P(STRONG("What is your " + keySequence[currentKeyIndex][1] + "?"))
             
         except ValueError:
-            document["zone"] <= P("Please double check your input")
+            document["errorBox"] <= P("Please double check your input")
             
     if keySequence[currentKeyIndex][0] == "NonNumerical":
         try:
