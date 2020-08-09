@@ -1,21 +1,21 @@
 brown
-People with brown eyes are put at a geneticlly lower risk of type 1 diabetes and melanoma of the eye compared to people with different coloured eyes
+People with brown eyes have a geneticlly lower risk of getting type 1 diabetes as well as melanoma of the eye compared to people with different coloured eyes.
 blue
-Blue eyes are blue becuse of the lack of pigment in the eyes, this causes people with blue eyes to have eyes more sensetive to changes in lights
+Blue eyes are only blue becuse of the lack of pigment found in the eyes. Becuse of this, people with blue eyes have eyes more sensetive to changes in light.
 hazel
-Hazel eyes are the only type of eyes that can have traces of all other pigments of eye color found in them.They also only one of two colours that can be found in solid colours(the other being brown) 
+Hazel eyes are the only type of eyes that can have traces of all other colour pigments found in them.They also only one of two colours that can be found in solid rings in the eye.(the other being brown) 
 amber
-People with amber coloured eyes have such a specfic combination of pigments in the eye that over time the majority of people with hazel eyes turn brown with age
+People with amber coloured eyes have such a specfic combination of pigments that make up their eye colour, that over time the majority of people with hazel eyes tend to turn brown with age.
 green
-Over 16 different genes are involed in creating green eyes this makes the colour green the most gene heavy naterually occuring eye colour in the world
+Over 16 different genes are involed in creating the green colour in the eyes. This makes the colour green the most gene heavy naterually occuring eye colour in the world.
 red/violet
-This colour is unquie in that the intensity of the red colour is dependant on how close blood flows to the eye, rather then being based off pigments
+This colour is unquie in that it is the only colour where the intensity of the red colour is dependant on how close blood flows to the eye, rather then being based off pigments like others.
 heterochromia
-People who are born with heterochromia are usally born immune with harmful affects that are assoicated such as vison and blood flow.
+People who are born with heterochromia are usally born immune with harmful affects that are assoicated with it, such as poor/loss of vison, weak blood flow and light sensetivity.
 other
-The majority of those born with unquie indivuall eye colors are often born with them dude to gentic mutations 
+The majority of those born with unquie indivuall eye colors are often born with them due to gentic mutations at birth.
 asia
-Asia is Earth's largest and most populous continent known to hold the most diverse range of living indignous cultures to day 
+Asia is Earth's largest and most populous continent, it is known to hold the most diverse range of living indignous groups to this day.
 africa
 Africa has eight of the 11 major biomes and the largest-remaining populations of lion, elephant, rhinoceros, cheetah, hyena, leopard and hundreds of other species.
 europe
@@ -29,6 +29,6 @@ Oceania is the only place in the world that is home to monotremes—mammals that
 male
 The Y chromosne that gives males their sex charaterics are acutally devloped through a mutation and is belived that over time the frequcy of male mutations devloping will drop over time until eventully reaching zero
 female
-There are cases where a females can be born with 3 X chromosnes rather then the usasal 2, these types of people are referred to as metafemale syndrome
+There are cases where a females can be born with 3 X chromosnes rather then the usasal 2, these types of people are referred to as metafemales
 intersex
 Being born intersex happens to be much more common then people realise witht the chance of being born intersex is the same as being born with naterually red hair
