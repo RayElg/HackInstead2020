@@ -1,6 +1,6 @@
 #Brython things...
 from browser import document
-from browser.html import P, STRONG
+from browser.html import P, STRONG, A
 import re
 
 #The dictionaries
@@ -33,7 +33,7 @@ def percentComparison(key, value): #Returns a string detailing the percent diffe
     global averages
     avg = averages[key]
     
-    percentDiff = (abs(value-avg)/((avg+value)/2)) * 100
+    percentDiff = (((abs(value - avg))/avg) * 100.0)
     if (value > avg):
         return ("Your " + re.sub("[\(\[].*?[\)\]]", "", key) + " is " + str((int(percentDiff*100))/(100.0)) + "% greater than the worldwide average, " + str(avg))
     elif (avg > value):
@@ -197,7 +197,11 @@ def submitClicked(event): #Handles the submit button being clicked
                     currentKeyIndex += 1
                 document["question"].clear()
                 document["question"] <= P(STRONG("Thank you!"))
-                document["submission"].clear()  
+                document["submission"].clear()
+                document["zone"] <= P(STRONG("If any of these figures about wealth or income equality concern you, consider looking at some of these charities..."))
+                document["zone"] <= P(A(' The UN Development Project ', href='https://www.undp.org'))
+                document["zone"] <= P(A(' The Borgen Project ', href='https://borgenproject.org/'))
+                document["zone"] <= P(A(' Oxfam ', href='https://www.oxfam.org'))
         
         except ValueError:
             document["zone"] <= P("Please double check your input")
