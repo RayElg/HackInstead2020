@@ -2,7 +2,7 @@
 Living in Canada makes it hard to grasp humanity on a global scale.
 This site is meant to give you some perspective...
 
-### Creative and Devlopment Team
+### Creative and Development Team
 
 * [Shaun](https://github.com/knat01)
 * [Raynor](https://github.com/RayElg)
