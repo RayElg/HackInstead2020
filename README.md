@@ -49,6 +49,15 @@ Once this prompt appears, posting the domain URL in the search bar of any web br
 http://localhost:8000/index.html
 ```
 
+##### Running through GitPages
+
+If you don't feel comfortable downloading git folders off the internet, you can always use the link below to be redirectted to the project page
+
+```
+https://rayelg.github.io/HackInstead2020/
+```
+
+
 
 
 
